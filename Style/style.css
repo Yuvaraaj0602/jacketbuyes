@@ -1,0 +1,632 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --head-color: #d3995f;
+    --lora: 'Lora', serif;
+    --regular: 600;
+    --medium: 400;
+    --sm: 12px;
+    --md: 13px;
+    --p: 15px;
+    --white: #fdfdfd;
+    --lightblack: #2a2a2a;
+    --bg-gray: #f9f9f9;
+    --bg-black: #292929;
+}
+
+a {
+    font-size: var(--p);
+    display: inline-block;
+    color: var(--lightblack);
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+i,
+img {
+    display: block;
+}
+
+h2 {
+    font-size: 3.125em;
+    font-weight: var(--regular);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 30px;
+    color: var(--head-color);
+    font-weight: var(--regular);
+}
+
+h4 {
+    font-size: 25px;
+    color: #2a2a2a;
+    font-weight: var(--regular);
+}
+
+h5 {
+    font-size: 20px;
+    color: #2a2a2a;
+    text-transform: capitalize;
+    font-weight: var(--regular);
+}
+
+h6 {
+    font-size: 15px;
+    color: #2a2a2a;
+    font-weight: var(--regular);
+    text-transform: uppercase;
+    margin: 22px 0px 13px 0px;
+}
+
+li {
+    font-size: var(--md);
+    list-style: none;
+    font-weight: var(--regular);
+}
+
+p {
+    font-size: 15px;
+    line-height: 30px;
+    color: #686868;
+    font-weight: var(--medium);
+    font-family: "Lora";
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.primary-navbar {
+    background-color: black;
+    padding: 10px 0;
+}
+
+.black-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.primary-navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.primary-navbar ul a {
+    font-size: var(--sm);
+    color: var(--white);
+}
+.primary-navbar li img{
+    transition: all 0.5s;
+}
+.primary-navbar li img:hover{
+    transform: scale(1.1);
+    content: url('../Images/104464_google_google\ plus_google+_icon.png');
+}
+.primary-navbar ul a:hover {
+    color: var(--head-color);
+}
+
+.flex-list {
+    transition: all 0.5s;
+    display: flex;
+}
+
+.secondary-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.secondary-navbar ul {
+    padding: 36px 0px;
+    display: flex;
+    gap: 60px;
+    list-style: none;
+
+}
+
+.secondary-navbar ul li a:hover {
+    color: var(--head-color);
+}
+
+.secondary-navbar ul a {
+    font-size: var(--md);
+}
+
+.home-section {
+    background-color: var(--bg-gray);
+}
+
+.home-block {
+    display: flex;
+    gap: 50px;
+}
+
+.home-content {
+    padding: 72px 0px 79px 100px;
+}
+
+.home-media {
+    padding-right: 105px;
+}
+
+.home-media img {
+    height: 100%;
+}
+
+.home-content h2 {
+    color: var(--head-color);
+}
+
+.home-content p {
+    padding: 41px 0px 36px 0px;
+}
+
+.home-content a:hover {
+    background-color: var(--head-color);
+    transform: scale(1.1);
+    color: var(--white);
+}
+
+.home-content a {
+    text-transform: uppercase;
+    padding: 18px 36px;
+    color: var(--lightblack);
+    text-decoration: none;
+    border: 1px solid var(--head-color);
+}
+
+.cart-section {
+    background-color: black;
+    padding: 26px 0px 20px 0px;
+    color: var(--white);
+}
+
+.cart-section nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-section a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.cart-section a:hover:not(.cart a) {
+    color: var(--head-color);
+}
+
+.cart-section ul {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    justify-content: start;
+}
+
+.cart-section select {
+    margin-left: 26px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--white);
+    font-size: var(--md);
+    font-weight: var(--regular);
+    text-transform: uppercase;
+    appearance: none;
+
+}
+.sel-nav{
+    position: relative;
+}
+.sel-nav::after{
+    content: '';
+    border: solid 5px;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    top: 10px;
+    left: 65px;
+}
+
+.cart-section option {
+    color: var(--lightblack);
+
+}
+
+.cart {
+    transition: all 0.5s;
+    padding: 12px;
+    background-color: var(--head-color);
+    font-size: 16px;
+}
+
+.cart-section .flex-list:hover {
+    transform: scale(1.02);
+}
+
+
+.rate {
+    padding: 12px;
+    background-color: var(--white);
+    color: var(--lightblack);
+    font-size: var(--md);
+}
+
+.cart-section input {
+    display: inline;
+    padding: 12px;
+    outline: none;
+    border: none;
+}
+
+.cart-section button {
+    padding: 12px;
+    border: none;
+    color: var(--white);
+    background-color: var(--head-color);
+}
+
+
+.popular-item-section {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.popular-item-section ul {
+    margin-bottom: 50px;
+    padding: 36px 0px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    gap: 47px;
+}
+
+.popular-item-section ul li a:hover {
+    color: var(--head-color);
+}
+
+.popular-item-section ul a {
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--lightblack);
+}
+
+.price {
+    color: var(--head-color);
+    padding: 0;
+
+}
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    text-align: center;
+}
+
+.product-card img {
+    transition: all 0.5s;
+    width: 100%;
+    height: 100%;
+}
+
+.product-card h6 {
+    transition: all 0.5s;
+    padding: 5px;
+    margin: 0;
+}
+
+.product-card h6 a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.product-card a img:hover {
+    transform: scale(1.05);
+}
+
+.product-card .content-group {
+    margin-top: 22px;
+    margin-bottom: 46px;
+}
+
+.winter-collection {
+    background: var(--bg-gray);
+    text-align: center;
+    padding-top: 60px;
+}
+
+.winter-collection p {
+    max-width: 566px;
+    margin: 37px auto;
+}
+
+
+.winter-collection a:hover:not(.product-card a) {
+    background-color: var(--head-color);
+    transform: scale(1.1);
+    color: var(--white);
+}
+
+.winter-collection a {
+
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--lightblack);
+    border: 1px solid var(--head-color);
+
+    padding: 19px 31px;
+}
+
+.product-card a {
+    padding: 0;
+    border: none;
+}
+
+.winter-desc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.winter-desc h6 {
+    margin-bottom: 70px;
+}
+
+.winter-card {
+    margin-top: 66px;
+}
+
+.season-sale {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: var(--bg-black);
+}
+
+.season-sale h2 {
+    color: white;
+}
+
+.newsletter {
+    background: var(--bg-gray);
+    height: 116px;
+}
+
+.newsletter div {
+    height: 116px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 47px;
+}
+
+.newsletter input[type='email'] {
+    width: 471px;
+    height: 47px;
+    outline: none;
+    margin-right: 26px;
+    padding-left: 26px;
+    font-weight: 400;
+    color: #262626;
+    border-radius: 0;
+    border: 1px solid var(--head-color);
+    transition: all 0.3s;
+}
+
+.newsletter input[type='submit']:hover {
+    transform: scale(1.1);
+}
+
+.newsletter input[type='email']:hover {
+    box-shadow: 0px 0px 1px 1px var(--head-color);
+}
+
+.newsletter input[type='submit'] {
+    transition: all 0.3s;
+    width: 171px;
+    height: 46px;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 400;
+    background-color: var(--head-color);
+    border: none;
+}
+
+.our-collection {
+    padding-top: 66px;
+}
+
+.collection-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 62px;
+}
+
+.collection-flex p {
+    flex: 1;
+}
+
+.collection-flex ul {
+    flex: 1;
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    align-items: center;
+    gap: 2px;
+}
+
+.collection-flex a {
+    flex: 1;
+    padding: 16px 22px;
+    border: 1px solid var(--head-color);
+}
+
+.collection-flex a:hover:not(.product-card a) {
+    background-color: var(--head-color);
+    transform: scale(0.9);
+    color: var(--white);
+}
+
+.our-collection .anc {
+    text-align: center;
+    margin-bottom: 66px;
+}
+
+.anc a {
+    border: 1px solid var(--head-color);
+    padding: 19px 31px;
+    transition: all 0.3s ease-in;
+
+}
+
+.anc a:hover {
+
+    background-color: var(--head-color);
+    transform: scale(1.1);
+    color: var(--white);
+
+
+}
+
+
+.about-us {
+    background-color: var(--bg-gray);
+    display: flex;
+    gap: 134px;
+}
+
+.about-us h4 {
+    margin-top: 4em;
+    margin-bottom: 38px;
+}
+
+.about-us p {
+    margin-top: 40px;
+    max-width: 444px;
+    padding-right: 20px;
+    margin-bottom: 47px;
+}
+
+.about-us a {
+    padding: 20px 36px;
+    color: #2a2a2a;
+    border: 1px solid var(--head-color);
+    transition: all 0.3s ease-in;
+}
+
+.about-us a:hover:not(.product-card a) {
+    background-color: var(--head-color);
+    transform: scale(1.1);
+    color: var(--white);
+}
+
+.big-img {
+    max-width: 100%;
+}
+
+footer {
+    background: var(--bg-black);
+    color: white;
+    padding-top: 63px;
+    padding-bottom: 40px;
+}
+
+.footer-flex {
+    display: flex;
+    gap: 35px;
+}
+
+.footer-flex div,
+.footer-flex ul {
+    flex: 2;
+}
+
+.footer-flex b a {
+    color: var(--head-color);
+}
+
+.footer-flex ul {
+    flex: 1;
+}
+
+footer li {
+    margin-bottom: 26px;
+}
+
+footer h6 {
+    color: var(--white);
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+footer a {
+    color: var(--white);
+    padding: 15px 80px;
+    border: 1px solid var(--head-color);
+    transition: all 0.3s ease-in;
+}
+
+footer a:hover:not(footer li a) {
+    transform: scale(1.1);
+
+    background: var(--head-color);
+
+
+}
+
+footer li a {
+    color: var(--white);
+    border: none;
+    padding: 0;
+    transition: none 1s;
+
+
+}
+
+.social-icons {
+    margin-top: 48px;
+    display: flex;
+    gap: 30px;
+}
+
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    content: url('../Images/104464_google_google\ plus_google+_icon.png');
+    width: 18px;
+}
+
+.contact-content {
+    font-size: var(--md);
+    color: white !important;
+}
+
+footer p {
+    margin-top: 31px;
+    margin-bottom: 47px;
+
+}
+
+.footer-flex li a:hover,
+.footer-flex i:hover {
+    color: var(--head-color);
+    transform: scale(1.1);
+}
